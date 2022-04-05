@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  width: 100%;
+  background: whitesmoke;
+  background-position: center;
+  background-size: cover;
+}
+/* topheader styling */
+.topheader {
+  background-color: rgba(158, 28, 63, 1);
+  height: 6vh;
+}
+/* header styling */
+.header {
+  background-color: rgba(131, 18, 56, 1);
+  height: 13vh;
+}
+/* All the links  */
+.link {
+  color: whitesmoke;
+  text-align: right;
+  margin-right: 2%;
+  padding-right: 6%;
+  padding-top: 10px;
+  font-family: Arial;
+  font-size: 13px;
+}
+.link a {
+  color: whitesmoke;
+}
+.logo {
+  padding-left: 6%;
+}
+
+.text {
+  float: right;
+  padding-right: 54%;
+  padding-top: 2%;
+  border-left: 3px double whitesmoke;
+  height: 100px;
+  color: white;
+  font-size: 200%;
+  font-family: Arial;
+  font: bolder;
+}
+.bg-img {
+  /* image used */
+  background-image: url("../images/formsidebg.jpg");
+  height: 640px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: left;
+}
+/* loginform container styling */
+.container {
+  color: whitesmoke;
+  top: 80px;
+  left: 520px;
+  font-family: "Times New Roman", Times, serif;
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  width: 400px;
+  height: 450px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/* signup form container styling  */
+.scontainer {
+  color: whitesmoke;
+  position: absolute;
+  top: 20px;
+  left: 350px;
+  font-family: "Times New Roman", Times, serif;
+  position: absolute;
+  right: 200px;
+  margin: 10px;
+  width: 50%;
+  height: 550px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.main form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+  width: cal(100% /2 - 20px);
+  margin-top: 30px;
+}
+.user-details .input-box input {
+  width: 330px;
+  height: 60%;
+  outline: none;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  /* font-size: 16px; */
+  /* border-radius: 5px; */
+  padding-left: 15px;
+  border: solid 0.2px #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+/* full-width input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: solid 0.2px black;
+  background: #f1f1f1;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"] {
+  background-color: #ddd;
+  outline: none;
+}
+/* styling the button */
+.btn {
+  background-color: rgba(158, 28, 63, 1);
+  color: whitesmoke;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 100%;
+  padding: 16px 20px;
+  margin-top: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.btn:hover {
+  opacity: 1;
+}
+.link a:link {
+  background-color: rgba(158, 28, 63, 1);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+.link a:hover {
+  background-color: white;
+  color: black;
+}
+.redirectmsg {
+  color: whitesmoke;
+  position: absolute;
+  top: 200px;
+  left: 350px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  right: 200px;
+  margin: 10px;
+  width: 50%;
+  height: 200px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.rlink a {
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: rgba(131, 18, 56, 1);
+  display: inline-block;
+  text-decoration: none;
+}
+.rlink a:hover {
+  color: black;
+  background-color: white;
+}
+.rlink p {
+  font-size: 22px;
+}
