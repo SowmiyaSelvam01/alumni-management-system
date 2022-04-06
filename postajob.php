@@ -11,7 +11,7 @@
         $skills=test_input($_POST["skillsreq"]);
     }
     if(isset($_POST["submit"])){
-        $sql="INSERT INTO jobs(id, email,company_name, job, job_description,salary,skills) values (Null,'$email','$companyname','$job','$jobdescription','$salary','$skills')";
+        $sql="INSERT INTO postedjobs(id, email,companyname, job, jobdescription,salary,skills,timeposted) values (Null,'$email','$companyname','$job','$jobdescription','$salary','$skills',NOW())";
         if(mysqli_query($con,$sql)){
             $msg="Thank you for the response, We will get back to you!!";
             // header("Location: successfullmsg.php");

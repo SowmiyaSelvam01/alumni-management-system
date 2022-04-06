@@ -67,13 +67,14 @@
                         <span class="details">Description</span>
                         <textarea name="description" id="description" cols="30" rows="10" placeholder="Description" autocomplete="off" required></textarea>
                     </div>
-               <div class="input-box">
+                <div class="input-box">
                         <span class="details">From Date</span>
-                        <input type="date" name="fromdate"  required>            
-                    </div>
+                        <input type="date" name="fromdate"  min="<?=date("Y-m-d");?>" required>            
+                </div>
+                
                 <div class="input-box">
                         <span class="details">To Date</span>
-                        <input type="date" name="todate"  required>
+                        <input type="date" name="todate" min="<?=date("Y-m-d");?>" required>
                     </div>
                 <button type="submit" value="submit" name="submit" class="btn">Submit</button>
             </form>

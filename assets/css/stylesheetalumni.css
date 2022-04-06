@@ -40,10 +40,13 @@
   font-family: Arial;
   font: bolder;
 }
-.alumnimain {
+.alumnimain,
+.adminmain {
   margin-top: 40px;
   margin-left: 50px;
   margin-right: 20px;
+}
+.alumnimain {
   color: rgba(131, 18, 56, 1);
 }
 .head {
@@ -227,7 +230,7 @@ textarea:focus {
 }
 .dashboard-container {
   /* background-color: rgba(158, 28, 63, 1); */
-  background-color: #990033;
+  background-color: steelblue;
   color: white;
   width: 400px;
   height: 150px;
@@ -245,21 +248,41 @@ textarea:focus {
   margin-right: 20px;
   width: 40%;
   padding: 10px;
-  background-color: seashell;
+  background-color: whitesmoke;
   float: left;
   border: black double 5px;
 }
 .eventname {
   font-weight: bolder;
+  color: black;
   font-size: 18px;
+  padding-bottom: 10px;
+  padding-right: 10px;
 }
 .eventdate {
-  font-size: 10px;
+  font-size: 12px;
+  padding-bottom: 10px;
 }
-.maincontainer {
-  width: 100%;
-  height: 100%;
-  border: 1px solid red;
-  margin-left: 10px;
-  margin-bottom: 10px;
+.adminmain {
+  margin-left: 250px;
+}
+table {
+  border: black solid 1.5px;
+  margin-top: 40px;
+}
+#table th,
+#table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+#table tr:hover {
+  background-color: #ddd;
+  color: black;
+}
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: steelblue;
+  color: white;
 }

@@ -2,15 +2,9 @@
     include './navigationbar.php';
     include './dbconnect.php';
     $eventname=$date=$description="";
-    $sql="SELECT * FROM events ORDER BY 'fromdate' ASC";
+    $sql="SELECT * FROM events ORDER BY fromdate ASC";
     $result=mysqli_query($con,$sql);
-    // $row=mysqli_fetch_array($result);
-    // echo $row;
     $count=$result->num_rows;
-    // echo $count;
-    if($result == TRUE){
-        
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,18 +19,23 @@
         <div class="head"><b>EVENTS - UPCOMING EVENTS</b></div><br>
         <div class="content">
             View the upcoming alumni events and conferences!
-            <br><br>
-            UPCOMING EVENTS
+            <br>
         </div>
             <?php
             while($count>0){
                     $row=mysqli_fetch_array($result);?>
                 <div class="eventcontainer">
                     <div class="eventname">
-                        <?php echo $row["eventname"];?>
+                        <?php echo strtoupper($row["eventname"]);?>
                     </div>
                     <div class="eventdate">
-                        DATE:<?php echo $row["fromdate"]." - ".$row["todate"];
+                        DATE:<?php 
+                            if($row["fromdate"]==$row["todate"]){
+                                echo $row["fromdate"];
+                            }
+                            else{
+                                echo $row["fromdate"]." - ".$row["todate"];
+                            }
                         ?>
                     </div>
                     <div class="eventdesc">
