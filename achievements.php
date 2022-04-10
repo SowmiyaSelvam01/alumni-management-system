@@ -1,6 +1,9 @@
 <?php
     include './navbaradmin.php';
-    include './dbconnect.php';
+    session_start();
+    if(!(isset($_SESSION['logged_in']))){
+        header("Location: adminlogin.php");  
+    }
     $sql="SELECT * FROM achievements";
     $result=mysqli_query($con,$sql);
     $count=$result->num_rows;    
@@ -22,7 +25,8 @@
             <div class="tableheader">
                 <tr>
                 <th>ID</th>
-                <th>NAME</th>
+                <th>NAME&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                </th>
                 <th>EMAIL</th>
                 <th>ACHIEVEMENT</th>
                 <th>DESCRIPTION</th>

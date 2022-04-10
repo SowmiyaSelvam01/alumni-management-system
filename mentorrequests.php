@@ -1,6 +1,9 @@
 <?php
     include './navbaradmin.php';
-    include './dbconnect.php';
+    session_start();
+    if(!(isset($_SESSION['logged_in']))){
+        header("Location: adminlogin.php");  
+    }
     $sql="SELECT * FROM mentorrequests";
     $result=mysqli_query($con,$sql);
     $count=$result->num_rows;    

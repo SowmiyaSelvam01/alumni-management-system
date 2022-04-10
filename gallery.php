@@ -1,5 +1,9 @@
 <?php
-include './navigationbar.php';
+    include './navigationbar.php';
+    session_start();
+    if(!(isset($_SESSION['logged_in']))){
+        header("Location: alumnilogin.php");  
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

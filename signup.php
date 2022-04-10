@@ -1,5 +1,4 @@
 <?php
-  include_once './dbconnect.php';
   include './navbarindex.php'; 
   $nameErr=$passwordErr=$confirmpwdErr=$newpassword="";
   $name=$email=$batch=$department=$password=$confirmpwd="";

@@ -1,3 +1,7 @@
+<?php
+    include './dbconnect.php';
+    include './scrolltotop.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +15,13 @@
 <body>
     <div class="topheader"></div>
     <div class="header">
-        <div class="logo">
+        <div class="logo-admin">
             <a href="adminhome.php"><img src="./assets/images/sistlogo.jpg" alt="logo"  height="75" ></a>                 
-            <div class="text"><b> &nbsp&nbsp&nbsp ALUMNI PORTAL </b></div>           
+            <div class="text-admin"><b> &nbsp&nbsp&nbsp ALUMNI PORTAL </b></div>           
         </div>
     </div>
     <div class="side-navbar">
-        <br><br><br>
+        <br><br><br><br><br><br><br><br><br>
         <ul> <b>
             <li><a href="adminhome.php"><i class="fa fa-home"></i>&nbsp
                 HOME &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
@@ -26,7 +30,6 @@
             <li><a href="postedjobs.php">POSTED JOBS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
             <li><a href="mentorrequests.php">MENTOR REQUESTS</a></li>
             <li><a href="updateevents.php">UPDATE EVENTS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
-            <li><a href="manageadmins.php">MANAGE ADMINS&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
             <li><a href="logout.php">LOGOUT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
         </ul></b>
     </div>

@@ -15,6 +15,9 @@
 .logo {
   padding-left: 6%;
 }
+.logo-admin {
+  padding-left: 13%;
+}
 /* topheader styling */
 .topheader {
   background-color: rgba(131, 18, 56, 1);
@@ -29,7 +32,8 @@
   background-color: rgba(131, 18, 56, 1);
   height: 6vh;
 }
-.text {
+.text,
+.text-admin {
   float: right;
   padding-right: 54%;
   padding-top: 2%;
@@ -39,6 +43,9 @@
   font-size: 200%;
   font-family: Arial;
   font: bolder;
+}
+.text-admin {
+  padding-right: 50%;
 }
 .alumnimain,
 .adminmain {
@@ -158,6 +165,7 @@ input[type="email"],
 input[type="password"],
 input[type="number"],
 input[type="date"],
+input[type="file"],
 textarea {
   width: 90%;
   padding: 15px;
@@ -166,7 +174,7 @@ textarea {
   background: #f1f1f1;
 }
 input[type="date"] {
-  width: 30%;
+  width: 40%;
 }
 input[type="file"] {
   padding: 15px;
@@ -176,11 +184,13 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="number"]:focus,
 input[type="date"]:focus,
+input[type="file"]:focus,
 textarea:focus {
   background-color: white;
   outline: none;
 }
-.btn {
+.btn,
+.delbtn {
   background-color: rgba(158, 28, 63, 1);
   color: whitesmoke;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -192,7 +202,11 @@ textarea:focus {
   width: 18%;
   opacity: 0.9;
 }
-.btn:hover {
+.delbtn {
+  width: 40%;
+}
+.btn:hover,
+.delbtn:hover {
   opacity: 1;
 }
 .content {
@@ -215,10 +229,10 @@ textarea:focus {
 .side-navbar {
   color: white;
   background-color: rgba(131, 18, 56, 1);
-  height: 673px;
+  height: 900px;
+  top: 0;
+  /* z-index: 1; */
   width: 200px;
-  padding: 0px;
-  margin: 0px;
   overflow-x: hidden;
   position: fixed;
 }
@@ -229,44 +243,56 @@ textarea:focus {
   padding-right: 50px;
 }
 .dashboard-container {
-  /* background-color: rgba(158, 28, 63, 1); */
-  background-color: steelblue;
-  color: white;
+  background-color: rgba(131, 18, 56, 0.6);
+  border: black solid 1px;
+  color: black;
   width: 400px;
-  height: 150px;
+  height: 200px;
   float: left;
   margin-left: 40px;
-  padding-right: 20px;
+  padding: 30px;
   padding-left: 20px;
   margin-right: 50px;
   margin-bottom: 50px;
 }
 .eventcontainer {
-  height: 200px;
+  height: 250px;
   margin-top: 20px;
   margin-left: 50px;
-  margin-right: 20px;
+  margin-right: 50px;
+  margin-bottom: 50px;
   width: 40%;
-  padding: 10px;
-  background-color: whitesmoke;
   float: left;
-  border: black double 5px;
+  border: black solid 2px;
+}
+.eventcontainer img {
+  padding-top: 0px;
+  padding-right: 0px;
+  width: 180px;
+  height: 233px;
 }
 .eventname {
   font-weight: bolder;
-  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: brown;
   font-size: 18px;
   padding-bottom: 10px;
-  padding-right: 10px;
 }
 .eventdate {
-  font-size: 12px;
+  font-size: 13px;
   padding-bottom: 10px;
+  color: black;
+  font-weight: bold;
+}
+.eventdesc {
+  font-size: 11px;
+  color: #414a4c;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .adminmain {
   margin-left: 250px;
 }
-table {
+#table {
   border: black solid 1.5px;
   margin-top: 40px;
 }
@@ -285,4 +311,92 @@ table {
   text-align: left;
   background-color: steelblue;
   color: white;
+}
+.number {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.dashboard-container:hover {
+  background-color: steelblue;
+}
+.open-button {
+  background: green;
+  color: white;
+  font-weight: bold;
+  padding: 16px 20px;
+  margin: 8px;
+}
+.name {
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* The Close Button */
+.close,
+.close1 {
+  position: absolute;
+  top: 15px;
+  right: 105px;
+  color: #f1f1f1;
+  font-size: 70px;
+  font-weight: bolder;
+  /* transition: 0.3s; */
+}
+
+.close:hover,
+.close1:hover,
+.close:focus,
+.close1:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+.bg-modal,
+.bg-modal1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal-content,
+.modal-content1 {
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  align-items: center;
+}
+.modal-content1 {
+  width: 800px;
+  height: 650px;
+  background-color: white;
+  padding: 20px;
+  align-items: center;
+}
+#mybtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 48px;
+  padding: 15px;
+}
+#mybtn:hover {
+  background-color: #555;
 }

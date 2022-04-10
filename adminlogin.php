@@ -1,9 +1,7 @@
 <?php
-  include './navbarindex.php';  
-  // include './dbconnect.php';
+  include './navbarindex.php'; 
   $message=$password="";
   if(count($_POST)>0){
-    include_once "dbconnect.php";
     $result= mysqli_query($con, "SELECT * FROM adminlogin WHERE username='".$_POST["username"]."' and password='".$_POST["password"]."'");
     if(!$result){
       echo mysqli_error($con);

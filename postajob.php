@@ -1,6 +1,9 @@
 <?php
     include './navigationbar.php';
-    include './dbconnect.php';
+    session_start();
+    if(!(isset($_SESSION['logged_in']))){
+        header("Location: alumnilogin.php");  
+    }
     $companyname=$job=$jobdescription=$salary=$skills=$msg=$email="";
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         $email=test_input($_POST["email"]);
@@ -14,7 +17,6 @@
         $sql="INSERT INTO postedjobs(id, email,companyname, job, jobdescription,salary,skills,timeposted) values (Null,'$email','$companyname','$job','$jobdescription','$salary','$skills',NOW())";
         if(mysqli_query($con,$sql)){
             $msg="Thank you for the response, We will get back to you!!";
-            // header("Location: successfullmsg.php");
         }
         else{
             echo "ERRor";
@@ -82,3 +84,8 @@
      
 </body>
 </html>
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>

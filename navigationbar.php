@@ -1,3 +1,7 @@
+<?php
+    include './dbconnect.php';
+    include './scrolltotop.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,7 @@
     <div class="header">
         <div class="logo">
             <a href="alumnihome.php"><img src="./assets/images/sistlogo.jpg" alt="logo"  height="75" ></a>                 
-            <div class="text"><b> &nbsp&nbsp&nbsp ALUMNI PORTAL</b></div>           
+            <div class="text"><b> &nbsp&nbsp&nbsp ALUMNI PORTAL</b></div>          
         </div>
     </div>
     <div class="nav-bar">
@@ -34,8 +38,6 @@
                 <li><a href="logout.php">LOG OUT</a></li></b>
             </ul>
         </div>
-    </div> 
-    
-
+    </div>
 </body>
 </html>

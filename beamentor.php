@@ -1,6 +1,9 @@
 <?php
     include './navigationbar.php';
-    include './dbconnect.php';
+    session_start();
+    if(!(isset($_SESSION['logged_in']))){
+        header("Location: alumnilogin.php");  
+    }
     $eventname=$organizer=$description=$email=$fromdate=$todate=$msg="";
         if($_SERVER["REQUEST_METHOD"]=="POST"){
             $eventname=test_input($_POST["eventname"]);
@@ -82,3 +85,8 @@
 </div>
 </body>
 </html>
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>

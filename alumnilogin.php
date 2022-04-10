@@ -2,13 +2,11 @@
   include './navbarindex.php';
   $message="";
   if(count($_POST)>0){
-    include_once "dbconnect.php";
     $result= mysqli_query($con, "SELECT * FROM alumnilogin WHERE email='".$_POST["email"]."'");
     if(!$result){
       echo mysqli_error($con);
       exit;
     }
-    // and password='".$_POST["password"]."'"
     $row= mysqli_fetch_array($result);
     $pwd=test_input($_POST["password"]);
     $pwd=md5($pwd);
