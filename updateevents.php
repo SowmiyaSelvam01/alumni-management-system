@@ -24,19 +24,13 @@
             $new_file_name=strtolower($file);
             $final_file=str_replace(' ','-',$new_file_name);
             if(move_uploaded_file($file_loc,$folder.$final_file)){
-                $sql="INSERT INTO events(id, eventname, organizer, description, fromdate, todate,file_name) values (Null,'$eventname','$organizer','$description','$fromdate','$todate','$final_file')";
-                if(mysqli_query($con,$sql)){
+                $query = "INSERT INTO events(id, eventname, organizer, description, fromdate, todate, file_name) VALUES (Null, '$eventname', '$organizer', '$description', '$fromdate', '$todate', '$final_file')";
+                if(mysqli_query($con,$query)){
                     $msg="Event Added Successfully!";
                 }
-                else{
-                    $msg="Merror";
-                }
-            }
-            else{
-                $msg="ERror";
             }
         }
-        else if(isset($_POST['delete'])){
+        if(isset($_POST['delete'])){
             $eventid=test_input($_POST["eventid"]);
             $sql="DELETE from events where id='$eventid'";
             if(mysqli_query($con,$sql)){

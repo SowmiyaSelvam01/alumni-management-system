@@ -138,9 +138,7 @@
               </div>
               
               <button type="submit" value="submit" name="submit" class="btn">Register</button><br /><br />
-            </div>
-          </div>
-        </form>
+            </div></div></form>
       </div>
     </div>
   </body>
